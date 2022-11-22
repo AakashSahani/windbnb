@@ -14,7 +14,7 @@ function Header() {
 						placeholder="Add location"
 					/>
 					<input type="text" name="guest" id="guest" placeholder="Add guests" />
-					<button type="submit">🔍 Search</button>
+					<button type="submit">🔍</button>
 				</form>
 			</nav>
 		</header>
