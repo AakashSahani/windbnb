@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Card from './shared/Card';
-import stayData from '../data/stays';
+import StayContext from '../context/StayContext';
 
 function Stays() {
-	const [stays, setStays] = useState(stayData);
+	const { stays, setStays } = useContext(StayContext);
 	return (
 		<>
 			<div className="title">
@@ -12,7 +12,7 @@ function Stays() {
 			</div>
 			<div className="stays">
 				{stays.map((stay) => (
-					<Card key={stay} stays={stay} />
+					<Card key={stay.id} stays={stay} />
 				))}
 				<Card stays={stays[0]} />
 			</div>
