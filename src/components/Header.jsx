@@ -3,15 +3,13 @@ import logo from '../assets/logo.svg';
 import StayContext from '../context/StayContext';
 
 function Header() {
-	const { stays, setStays } = useContext(StayContext);
-
-	const handleClick = () => {
-		console.log('hello');
-	};
+	const { stays, setStays, filterLocation, filterGuests } =
+		useContext(StayContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log('hello');
+		filterGuests(5);
 	};
 
 	return (
@@ -25,13 +23,7 @@ function Header() {
 						id="location"
 						placeholder="Add location"
 					/>
-					<input
-						type="text"
-						name="guest"
-						id="guest"
-						placeholder="Add guests"
-						onChange={handleChange}
-					/>
+					<input type="text" name="guest" id="guest" placeholder="Add guests" />
 					<button type="submit">🔍</button>
 				</form>
 			</nav>
