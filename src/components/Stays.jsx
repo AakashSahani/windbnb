@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Card from './shared/Card';
 import StayContext from '../context/StayContext';
 
 function Stays() {
 	const { stays, setStays } = useContext(StayContext);
+	useEffect(() => {}, [stays]);
 	return (
 		<>
 			<div className="title">

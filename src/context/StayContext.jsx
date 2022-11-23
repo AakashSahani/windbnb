@@ -5,16 +5,27 @@ const StayContext = createContext();
 
 export const StayProvider = ({ children }) => {
 	const [stays, setStays] = useState(stayData);
+	const [adultCount, setAdultCount] = useState(0);
+	const [childrenCount, setChildrenCount] = useState(0);
 
-	const filterLocation = (location) => {
-		console.log(stays.filter((stay) => stay.location === location));
+	const filterLocation = (city) => {
+		stays.filter((stay) => stay.city === city);
 	};
 	const filterGuests = (guests) => {
-		console.log(stays.filter((stay) => stay.maxGuests > guests));
+		stays.filter((stay) => stay.maxGuests > guests);
 	};
 	return (
 		<StayContext.Provider
-			value={{ stays, setStays, filterLocation, filterGuests }}
+			value={{
+				stays,
+				adultCount,
+				setAdultCount,
+				childrenCount,
+				setChildrenCount,
+				setStays,
+				filterLocation,
+				filterGuests,
+			}}
 		>
 			{children}
 		</StayContext.Provider>

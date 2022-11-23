@@ -36,6 +36,7 @@ form {
 
 nav input {
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0 0.5rem;
 	font-size: 1rem;
@@ -61,6 +62,68 @@ nav button {
 	border-radius: 0 0.5rem 0.5rem 0;
 }
 
+/* Active */
+.active {
+	flex-direction: column;
+}
+
+.active img {
+	display: none;
+}
+
+.active nav {
+	width: 90%;
+}
+
+.active form {
+	width: 100%;
+}
+
+.dropdown-container {
+	height: 100%;
+	flex: 1;
+}
+
+.dropdown-container > * {
+	margin: 1rem 0;
+}
+
+.dropdown {
+	display: flex;
+	width: 100%;
+	padding: 5%;
+	height: 100%;
+	align-items: center;
+}
+
+.dropdown > * {
+	height: 100%;
+}
+
+.city:hover {
+	cursor: pointer;
+}
+
+.guest {
+	flex: 1;
+}
+
+.guest > div {
+	margin: 1rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 50%;
+}
+
+.count > * {
+	margin-right: 0.25rem;
+}
+
+.count button {
+	background: none;
+	border: none;
+}
 /* Title */
 .title {
 	display: flex;
